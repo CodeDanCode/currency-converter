@@ -1,0 +1,96 @@
+<!--
+Daniel Leach
+Intro to Internet Computing
+COP 3813
+last updated: 2/9/2019
+
+Project 3 Conversion App w/ Javascript
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    <!--Bootstrap scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <!--google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Chonburi" rel="stylesheet">
+
+    <!--My style sheet-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="jumbotron container-fluid">
+        <div class="container">
+            <div id="jumbotext">
+                <h1>Currency Converter</h1>
+                <p id="amountP">
+                    <input type="number" id="amount" value="1" min="1">
+                </p>
+                
+                <h3>Convert from</h3>
+                
+                <select class="form-control btn btn-default" id="convertFrom" onchange="changeEUR()">
+                    
+                    <option value="EUR" id="EURFrom">EUR - Euro</option>
+                    
+                    <option value="US">US - US Dollar</option>
+                    
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="AUD">AUD - Australian Dollar</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    <option value="SGD">SGD - Singaporian Dollar</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                    <option value="MYR">MYR - Malaysian Ringgit </option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="CNY">CNY - Chinese Yuan Renminbi</option>
+                </select>
+                
+                <h3>Convert To</h3>
+                
+                <select class="form-control btn btn-default" id="convertTo" onchange="changeOther()">
+                    <option value="EUR" id="EURTo">EUR - Euro</option>
+                    
+                    <option value="US" selected="select">US - US Dollar</option>
+                    
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="AUD">AUD - Australian Dollar</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    <option value="SGD">SGD - Singaporian Dollar</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                    <option value="MYR">MYR - Malaysian Ringgit</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="CNY">CNY - Chinese Yuan Renminbi</option>
+                </select>
+                
+                <div id="submitBTN">
+                    <input type="button" id="submit" value="submit">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div id="answerP">
+        <p id="answer"></p>
+    </div>
+    <div class="container-fluid">
+        <footer>
+            <h5>Copyright &copy; 2019 Daniel Leach</h5>
+        </footer>
+    </div>
+</body>
+<!--My JavaScript-->
+<script src="./js/script.js"></script>
+</html>
