@@ -2,7 +2,6 @@
 Daniel Leach
 Intro to Internet Computing
 COP 3813
-last updated: 2/09/2019 
 
 Project 3 Conversion App w/ Javascript
 */
